@@ -28,10 +28,8 @@ cors_proxy.createServer({
   originBlackList: originBlackList,
   originWhiteList: originWhiteList,
   requireHeader: ['origin', 'x-requested-with'],
+  removeHeaders: ['cookie', 'cookie2'],
   checkRateLimit: checkRateLimit,
-  removeHeaders: [
-    'aaaaa',
-  ],
   redirectSameOrigin: true,
   httpProxyOptions: {
     // Do not add X-Forwarded-For, etc. headers, because Heroku already adds it.
